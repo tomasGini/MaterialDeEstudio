@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.general {
+    background-color: rgba(196, 192, 192, 0.76);
+}
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+.imagen {
+    height: 700px;
+    background: url(C:\Users\tomas\Desktop\agus\Branding\inicio.jpg) no-repeat;
+    background-size: cover;
+}
+.nav {
+    background-color:#48e;
+}
+.nav__ul {
+    margin: 0px;
+    padding: 14px;
+}
+.nav__ul-li{
+    text-align: right;
+}
+.nav__li {
+    display: inline-block;
+}
+.nav__li a {
+    color: white;
+    font-family:'Questrial', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 10px;
+    list-style: none;
+}
+.buscar {
+    position: absolute;
+    margin-top:-6px;
+}
+.nav__ul input {
+    position:absolute;
+    font-family: 'Questrial',sans-serif;
+    outline: none;
+    border: 0;
+    height: 28px;
+    border-radius: 17px;
+    font-size: 15px;
+    padding: 0 25px;
+    z-index: 2;
+    border: 1px solid silver;
+}
+.button {
+    position: absolute;
+    margin: 6px;
+    z-index: 2;
+}
+.nav__li:hover > a {
+    color: #bbb;
+    text-decoration: none;
+    text-align: center;
+}
+
+.box__titulo-inicio {
+    margin: auto;
+    margin-top: 200px;
+    width: 450px;
+    height: 190px;
+}
+.box__titulo-inicio h1 {
+    color: rgb(0, 0, 0);
+    font-family: 'Monserrat',sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20;
+    text-align: center;
+}
+.box__titulo-inicio p {
+    color: rgb(0, 0, 0);
+    font-family: 'Monserrat',sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+.box__titulo-mds{
+    margin-top: -35px;
+    height:100%;
+    background:#48e;
+    margin-bottom: 20;
+}
+
+.box__titulo-mds h1{
+    font-family: 'Monserrat',sans-serif;
+    text-align: center;
+    padding: 25px;
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.box__container-material{
+    margin:auto;
+    margin-top:30px;
+    height: 84%;
+    width: 80%;
+    background-color: rgb(223, 219, 219);
+}
+
+.grid-container{
+    display: grid;
+    height: 100%;
+    grid-template-columns: auto auto auto auto;
+}
+
+.grid-container div{
+    background-color:rgba(255, 255, 255, 0.726);
+    border:1px solid black;
+    margin:20px;
+}
+.grid-container div:hover > div{
+    color: rgb(155, 0, 0);
+}
+.copy {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.35);
+    font-size: 11px;
+    font-family: Georgia;
+    padding: 14px 0 14px 0;
+    text-align: center;
+    width: 100%;
+}
+/*Formulario de Login*/
+.form-login {
+    font-family: Arial;
+    width: 400px;
+    height: 340px;
+    background: #4e4d4d;
+    margin: auto;
+    margin-top: 150px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 20px 30px;
+    border-top: 4px solid #48e;
+    color: #fff;
+}
+
+.form-login h5 {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 20px;
+}
+
+.controls {
+    width: 100%;
+    border: 1px solid #48e;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #252323;
+    font-size: 14px;
+    color: rgb(238, 228, 228);
+}
+
+.buttons {
+    width: 100%;
+    height: 40px;
+    background: #48e;
+    border: none;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.form-login p {
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+
+.form-login a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.form-login a:hover {
+    text-decoration: underline;
+}
+
+.ok {
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #4e8;
+    color: #fff;
+}
+
+.bad {
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #a22;
+    color: #fff;
+}
