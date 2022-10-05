@@ -31,13 +31,15 @@
             </nav>
         </header>
         <form action="subir.php" method="POST" enctype="multipart/form-data">
-            <label for="file">Subir PDF</label><br>
-            <input type="file" id="file" name="file"><br>
+            <section class="form-subir">
+                <h5>Subir apuntes</h5>
+                <label class="texto-subir-desc" for="file">Agregar Archivo PDF</label><br>
+                <input type="file" class="file" id="file" name="file"><br>
 
-            <label for="desc">Descripcion</label><br>
-            <input type="text" id="desc" name="desc"><br>
+                <label class="texto-subir-desc" for="desc">Añada una breve descripcion</label><br>
+                <input type="text" id="desc" name="desc"><br>
         
-            <input type="submit" value="Subir"><br>
+                <input type="submit" value="Subir"><br>
         </form>
         <footer>
             <div>

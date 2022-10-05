@@ -191,7 +191,60 @@ body {
 .form-login a:hover {
     text-decoration: underline;
 }
+/* Formulario subir*/
+.form-subir {
+    font-family: Arial;
+    width: 400px;
+    height: 340px;
+    background: #4e4d4d;
+    margin: auto;
+    margin-top: 150px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 20px 30px;
+    border-top: 4px solid #48e;
+    color: #fff;
+}
+.form-subir h5 {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 20px;
+}
+.file {
+    margin-top: 4px;
+    margin-bottom: 26px;
+}
+#file {
+    /*EL CUADRADITO DE SELECCIONAR ARCHIVOS*/
+}
+#desc {
+    margin-top: 4px;
+    width: 335px;
+    height: 100px;
+}
+.texto-subir-desc {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+.form-subir p {
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
 
+.form-subir a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.form-subir a:hover {
+    text-decoration: underline;
+}
+
+/*Estilo de los estados de aprobacion del login*/
 .ok {
     text-align: center;
     width: 100%;
