@@ -6,7 +6,7 @@
             $usuario = trim($_POST['usuario']);
             $email = trim($_POST['email']);
             $pwd = trim($_POST['pwd']);
-            $consulta = "INSERT INTO USUARIOS(usuario,email,pwd) VALUES ('$usuario','$email','$pwd')";
+            $consulta = "INSERT INTO usuarios!(usuario,email,pwd) VALUES ('$usuario','$email','$pwd')";
             $resultado = mysqli_query($conexion,$consulta);
             
             if ($resultado) {

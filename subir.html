@@ -18,15 +18,14 @@
                 <ul class="nav__ul">
                     <div class="buscar">
                         <input type="text" placeholder="Buscar.." required>
-                        <div class="button">
+                        <div class="button-busqueda">
                             <i class="fa-solid fa-magnifying-glass icon"></i>
                         </div>
                     </div>
-                    <div class="nav__ul-li">
-                        <i class="fa-solid fa-house"></i>
-                        <li class="nav__li" ><a href="index.html">Inicio</a></li>
-                        <li class="nav__li" ><a href="subir.html">Subir</a></li>
-                        <li class="nav__li" ><a href="cuenta.html">Cuenta</a></li>
+                    <div class="nav__ul-li">   
+                        <li class="nav__li" ><a class="button-li" href="index.html"><span class="fa-solid fa-house"></span></a></li>
+                        <li class="nav__li" ><a class="button-li" href="subir.html"><span class="fa-solid fa-file-arrow-up"></span></a></li>
+                        <li class="nav__li" ><a class="button-li" href="cuenta.html"><span class="fa-solid fa-user"></span></a></li>
                     </div>
                 </ul>
             </nav>
@@ -34,14 +33,34 @@
         <form action="subir.php" method="POST" enctype="multipart/form-data">
             <section class="form-subir">
                 <h5>Subir apuntes</h5>
-                <label class="texto-subir-desc" for="file">Agregar Archivo PDF</label><br>
-                <input type="file" class="file" id="file" name="file"><br>
-
-                <label class="texto-subir-desc" for="desc">Añada una breve descripcion</label><br>
+                
+                <div class="archvio-div">
+                    <input type="file" class="file" id="input-file" name="file">
+                    <label class="texto-subir-desc" for="input-file">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        &nbsp; Agregar archivo..
+                    </label>
+                    <span id ="archivo-agregado">
+                    <strong>Archivo: </strong>
+                    <span id="file-name">Ninguno</span>
+                    </span>
+                    <script>
+                        let inputFile = document.getElementById('input-file');
+                        let fileNameField = document.getElementById('file-name');
+                        inputFile.addEventListener('change',function(){
+                            let uploadedFileName = event.target.files[0].name;
+                           fileNameField.textContent = uploadedFileName;
+                        })
+                    </script>
+                </div>         
                 <input type="text" id="desc" name="desc"><br>
-        
-                <input type="submit" value="Subir"><br>
-        </form>
+                <label class="texto-subir-desc" for="desc">Añada una breve descripcion</label><br>
+                
+                <div class="submit-div">
+                    <input type="submit" id = "submit" value="Subir">
+                </div>
+            </section>
+            </form>
         <footer>
             <div>
                 <h4 class="copy">Copyright© - Todos los derechos reservados</h4>

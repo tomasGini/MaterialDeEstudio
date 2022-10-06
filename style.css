@@ -19,17 +19,22 @@ body {
 }
 .nav {
     background-color:#48e;
+    height: 40px;
 }
 .nav__ul {
-    margin: 0px;
-    padding: 14px;
+    height: 100%;
+    padding: 0px;
 }
 .nav__ul-li{
     text-align: right;
 }
 .nav__li {
     display: inline-block;
+    margin-top: 11px;
 }
+
+
+
 .nav__li a {
     color: white;
     font-family:'Questrial', sans-serif;
@@ -53,10 +58,16 @@ body {
     padding: 0 25px;
     z-index: 2;
     border: 1px solid silver;
+    margin: 11px;
 }
-.button {
+.button-busqueda {
     position: absolute;
-    margin: 6px;
+    margin: 17px; 
+    z-index: 2;
+}
+.button-li{
+    height: 15px;
+    margin: 6px; 
     z-index: 2;
 }
 .nav__li:hover > a {
@@ -124,16 +135,7 @@ body {
 .grid-container div:hover > div{
     color: rgb(155, 0, 0);
 }
-.copy {
-    position: absolute;
-    color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.35);
-    font-size: 11px;
-    font-family: Georgia;
-    padding: 14px 0 14px 0;
-    text-align: center;
-    width: 100%;
-}
+
 /*Formulario de Login*/
 .form-login {
     font-family: Arial;
@@ -159,7 +161,6 @@ body {
 
 .controls {
     width: 100%;
-    border: 1px solid #48e;
     margin-bottom: 15px;
     padding: 11px 10px;
     background: #252323;
@@ -212,21 +213,46 @@ body {
     border-bottom: 1px solid;
     font-size: 20px;
 }
-.file {
-    margin-top: 4px;
-    margin-bottom: 26px;
+
+input#input-file {
+    display: none;
 }
-#file {
-    /*EL CUADRADITO DE SELECCIONAR ARCHIVOS*/
+input#input-file + label {
+    background-color: #48e;
+    padding: 8px;
+    color: #fff;
+    border: 1px solid #9ec3ff;
+    border-radius: 8px;
+    padding-right: 5px;
+}
+input#input-file + label:hover {
+    background-color: #3b7ce3;
+    border-color: #729fe7;
+    cursor: pointer;
+}
+#archivo-agregado{
+    position:absolute;
 }
 #desc {
-    margin-top: 4px;
+    margin-top: 30px;
+    margin-bottom: 8px;
     width: 335px;
     height: 100px;
+    background: #252323;
+    color: #fff;
 }
 .texto-subir-desc {
-    margin-bottom: 30px;
     font-size: 18px;
+}
+
+#submit {
+    margin-left: 40%;
+    margin-top: 6%;
+    background-color: #48e;
+    padding: 8px;
+    color: #fff;
+    border: 1px solid #9ec3ff;
+    border-radius: 8px;
 }
 .form-subir p {
     height: 40px;
@@ -243,7 +269,17 @@ body {
 .form-subir a:hover {
     text-decoration: underline;
 }
-
+.copy {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.35);
+    font-size: 11px;
+    font-family: Georgia;
+    padding: 14px 0 14px 0;
+    text-align: center;
+    width: 100%;
+    
+}
 /*Estilo de los estados de aprobacion del login*/
 .ok {
     text-align: center;

@@ -5,7 +5,7 @@
     $email = $_POST['email'];
     $pwd = $_POST['pwd'];
 
-    $consulta = "SELECT* FROM usuarios where email = '$email' and pwd = '$pwd'";
+    $consulta = "SELECT* FROM usuarios! where email = '$email' and pwd = '$pwd'";
     $result = mysqli_query($conexion, $consulta);
     $filas = mysqli_num_rows($result);
 

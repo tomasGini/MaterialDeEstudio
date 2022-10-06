@@ -18,14 +18,14 @@
                 <ul class="nav__ul">
                     <div class="buscar">
                         <input type="text" placeholder="Buscar.." required>
-                        <div class="button">
+                        <div class="button-busqueda">
                             <i class="fa-solid fa-magnifying-glass icon"></i>
                         </div>
                     </div>
                     <div class="nav__ul-li">
-                        <li class="nav__li" ><a href="index.html">Inicio</a></li>
-                        <li class="nav__li" ><a href="subir.html">Subir</a></li>
-                        <li class="nav__li" ><a href="cuenta.html">Cuenta</a></li>
+                    <li class="nav__li" ><a class="button-li" href="index.html"><span class="fa-solid fa-house"></span></a></li>
+                        <li class="nav__li" ><a class="button-li" href="subir.html"><span class="fa-solid fa-file-arrow-up"></span></a></li>
+                        <li class="nav__li" ><a class="button-li" href="cuenta.html"><span class="fa-solid fa-user"></span></a></li>
                     </div>
                 </ul>
             </nav>
