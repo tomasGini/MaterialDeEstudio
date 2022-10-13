@@ -10,52 +10,76 @@
         <link rel="canonical" href="https://materialdeestudio.com/">
         <link rel="shortlink" href="https://materialdeestudio.com/">
         <link rel="icon" href="https://materialdeestudio.com/wp-content/uploads/2022/03/cropped-simbolo-color@2x-32x32.png" sizes="32x32">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/d9aeb1352a.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     </head>
-    <body class="general">
+    <body>
         <header>
-            <nav class="nav">
-                <ul class="nav__ul">
-                    <div class="buscar">
-                        <input type="text" placeholder="Buscar.." required>
-                        <div class="button-busqueda">
-                            <i class="fa-solid fa-magnifying-glass icon"></i>
-                        </div>
-                    </div>
-                    <div class="nav__ul-li">   
-                        <li class="nav__li" ><a class="button-li" href="index.html"><span class="fa-solid fa-house"></span></a></li>
-                        <li class="nav__li" ><a class="button-li" href="subir.html"><span class="fa-solid fa-file-arrow-up"></span></a></li>
-                        <li class="nav__li" ><a class="button-li" href="cuenta.html"><span class="fa-solid fa-user"></span></a></li>
-                    </div>
-                </ul>
-            </nav>
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                    <li class="navbar-brand" style="list-style:none;">
+                        <a href="#">
+                            <img src="C:\xampp\htdocs\Material\Branding\Png\logo color@2x.png" alt="Logo" width="125" height="38" class="d-inline-block align-text-top">
+                        </a>
+                      </li>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-home">
+                        <a class="nav-link active"aria-current="page" href="index.html"><span class="fa-solid fa-house"></span></span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="subir.html"><span class="fa-solid fa-file-arrow-up"></span></a></a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         <span class="fa-solid fa-user"></span></a>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="cuenta.html">Mi Cuenta</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Configuracion</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit" id="boton-busqueda">Buscar</button>
+                    </form>
+                  </div>
+                </div>
+              </nav> 
         </header>
         <form action="subir.php" method="POST" enctype="multipart/form-data">
             <section class="form-subir">
                 <h5>Subir apuntes</h5>
-                
-                <div class="archvio-div">
-                    <input type="file" class="file" id="input-file" name="file">
-                    <label class="texto-subir-desc" for="input-file">
+                <div class="agregar_archvio-div">
+                    <input type="file" class="file" id="archivo-ingresado" name="file">
+                    <label class="texto-subir-desc" for="archivo-ingresado">
                         <i class="fa-solid fa-arrow-up-from-bracket"></i>
                         &nbsp; Agregar archivo..
                     </label>
-                    <span id ="archivo-agregado">
+                    <span id ="nombre-archivo-agregado">
                     <strong>Archivo: </strong>
-                    <span id="file-name">Ninguno</span>
+                    <span id="nombre-archivo">Ninguno</span>
                     </span>
                     <script>
-                        let inputFile = document.getElementById('input-file');
-                        let fileNameField = document.getElementById('file-name');
-                        inputFile.addEventListener('change',function(){
+                        let archivoIngresado = document.getElementById('archivo-ingresado');
+                        let nombre = document.getElementById('nombre-archivo');
+                        archivoIngresado.addEventListener('change',function(){
                             let uploadedFileName = event.target.files[0].name;
-                           fileNameField.textContent = uploadedFileName;
+                            nombre.textContent = uploadedFileName;
                         })
                     </script>
                 </div>         
-                <input type="text" id="desc" name="desc"><br>
-                <label class="texto-subir-desc" for="desc">Añada una breve descripcion</label><br>
-                
+                <div class="desc_container">
+                    <label class="texto-subir-desc" for="desc">Añada una breve descripcion</label><br>
+                    <input type="text" id="desc" name="desc"><br>
+                </div>
                 <div class="submit-div">
                     <input type="submit" id = "submit" value="Subir">
                 </div>

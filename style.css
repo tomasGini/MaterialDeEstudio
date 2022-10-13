@@ -1,141 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Nav */
+#boton-busqueda {
+    color: #48e;
+    border-color:#48e;
 }
-.general {
-    background-color: rgba(196, 192, 192, 0.76);
-}
-body {
-    display: grid;
-    min-height: 100vh;
-    grid-template-rows: auto 1fr auto;
-}
-
-.imagen {
-    height: 700px;
-    background: url(C:\Users\tomas\Desktop\agus\Branding\inicio.jpg) no-repeat;
-    background-size: cover;
-}
-.nav {
+#boton-busqueda:hover {
+    color: #fff;
     background-color:#48e;
-    height: 40px;
 }
-.nav__ul {
-    height: 100%;
-    padding: 0px;
-}
-.nav__ul-li{
-    text-align: right;
-}
-.nav__li {
-    display: inline-block;
-    margin-top: 11px;
-}
-
-
-
-.nav__li a {
-    color: white;
-    font-family:'Questrial', sans-serif;
-    text-decoration: none;
-    font-size: 16px;
-    margin-left: 10px;
-    list-style: none;
-}
-.buscar {
-    position: absolute;
-    margin-top:-6px;
-}
-.nav__ul input {
-    position:absolute;
-    font-family: 'Questrial',sans-serif;
-    outline: none;
-    border: 0;
-    height: 28px;
-    border-radius: 17px;
-    font-size: 15px;
-    padding: 0 25px;
-    z-index: 2;
-    border: 1px solid silver;
-    margin: 11px;
-}
-.button-busqueda {
-    position: absolute;
-    margin: 17px; 
-    z-index: 2;
-}
-.button-li{
-    height: 15px;
-    margin: 6px; 
-    z-index: 2;
-}
-.nav__li:hover > a {
-    color: #bbb;
-    text-decoration: none;
-    text-align: center;
-}
-
-.box__titulo-inicio {
-    margin: auto;
-    margin-top: 200px;
-    width: 450px;
-    height: 190px;
-}
-.box__titulo-inicio h1 {
-    color: rgb(0, 0, 0);
-    font-family: 'Monserrat',sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 20;
-    text-align: center;
-}
-.box__titulo-inicio p {
-    color: rgb(0, 0, 0);
-    font-family: 'Monserrat',sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
-}
-.box__titulo-mds{
-    margin-top: -35px;
-    height:100%;
-    background:#48e;
-    margin-bottom: 20;
-}
-
-.box__titulo-mds h1{
-    font-family: 'Monserrat',sans-serif;
-    text-align: center;
-    padding: 25px;
-    color: rgb(255, 255, 255);
-    font-size: 45px;
-    font-weight: 700;
-}
-
-.box__container-material{
-    margin:auto;
-    margin-top:30px;
-    height: 84%;
-    width: 80%;
-    background-color: rgb(223, 219, 219);
-}
-
-.grid-container{
-    display: grid;
-    height: 100%;
-    grid-template-columns: auto auto auto auto;
-}
-
-.grid-container div{
-    background-color:rgba(255, 255, 255, 0.726);
-    border:1px solid black;
-    margin:20px;
-}
-.grid-container div:hover > div{
-    color: rgb(155, 0, 0);
-}
-
 /*Formulario de Login*/
 .form-login {
     font-family: Arial;
@@ -149,7 +20,6 @@ body {
     border-top: 4px solid #48e;
     color: #fff;
 }
-
 .form-login h5 {
     margin: 0;
     text-align: center;
@@ -158,7 +28,6 @@ body {
     border-bottom: 1px solid;
     font-size: 20px;
 }
-
 .controls {
     width: 100%;
     margin-bottom: 15px;
@@ -167,7 +36,6 @@ body {
     font-size: 14px;
     color: rgb(238, 228, 228);
 }
-
 .buttons {
     width: 100%;
     height: 40px;
@@ -176,23 +44,37 @@ body {
     color: #fff;
     margin-bottom: 16px;
 }
-
 .form-login p {
     height: 40px;
     text-align: center;
     border-bottom: 1px solid;
 }
-
 .form-login a {
     color: #fff;
     text-decoration: none;
     font-size: 14px;
 }
-
 .form-login a:hover {
     text-decoration: underline;
 }
-/* Formulario subir*/
+
+/*Estilo de los estados de aprobacion del login*/
+.ok {
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #4e8;
+    color: #fff;
+}
+.bad {
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #a22;
+    color: #fff;
+}
+
+/* Formulario subir archivos*/
 .form-subir {
     font-family: Arial;
     width: 400px;
@@ -209,15 +91,18 @@ body {
     margin: 0;
     text-align: center;
     height: 40px;
-    margin-bottom: 30px;
     border-bottom: 1px solid;
     font-size: 20px;
+    margin-bottom: 15px;
 }
-
-input#input-file {
+.agregar_archivo-div {
+    margin-top: 15px;
+    justify-content: left; 
+}
+input#archivo-ingresado {
     display: none;
 }
-input#input-file + label {
+input#archivo-ingresado + label {
     background-color: #48e;
     padding: 8px;
     color: #fff;
@@ -225,74 +110,61 @@ input#input-file + label {
     border-radius: 8px;
     padding-right: 5px;
 }
-input#input-file + label:hover {
+input#archivo-ingresado + label:hover {
     background-color: #3b7ce3;
     border-color: #729fe7;
     cursor: pointer;
 }
-#archivo-agregado{
-    position:absolute;
+#nombre-archivo-agregado {
+    margin-left: 0.1em;
 }
 #desc {
-    margin-top: 30px;
     margin-bottom: 8px;
     width: 335px;
     height: 100px;
     background: #252323;
     color: #fff;
 }
+.desc_container {
+    margin-top: 1.5em;
+    text-align: center;
+}
 .texto-subir-desc {
+    margin-bottom:0.2em;
     font-size: 18px;
 }
-
 #submit {
-    margin-left: 40%;
-    margin-top: 6%;
     background-color: #48e;
     padding: 8px;
     color: #fff;
     border: 1px solid #9ec3ff;
     border-radius: 8px;
 }
+.submit-div {
+    text-align: center;
+}
 .form-subir p {
     height: 40px;
     text-align: center;
     border-bottom: 1px solid;
 }
-
 .form-subir a {
     color: #fff;
     text-decoration: none;
     font-size: 14px;
 }
-
 .form-subir a:hover {
     text-decoration: underline;
 }
+
+/* Estilo del Footer */
 .copy {
     position: absolute;
+    bottom: 0;
     color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.35);
     font-size: 11px;
-    font-family: Georgia;
-    padding: 14px 0 14px 0;
-    text-align: center;
     width: 100%;
-    
-}
-/*Estilo de los estados de aprobacion del login*/
-.ok {
+    height: 40px;
     text-align: center;
-    width: 100%;
-    padding: 12px;
-    background-color: #4e8;
-    color: #fff;
-}
-
-.bad {
-    text-align: center;
-    width: 100%;
-    padding: 12px;
-    background-color: #a22;
-    color: #fff;
 }
